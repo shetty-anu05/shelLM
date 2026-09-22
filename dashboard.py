@@ -187,7 +187,28 @@ DASHBOARD_HTML = """
         .alert-box { background: #1c2128; border: 1px solid #f85149; border-radius: 8px; padding: 12px 16px; margin-bottom: 8px; font-size: 12px; }
         .alert-box.green { border-color: #39d353; }
         .ts { color: #8b949e; font-size: 11px; }
-        .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        ..grid2 {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 20px;
+}
+
+.grid2 > div {
+    min-width: 0;
+}
+
+.log-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+.log-table th,
+.log-table td {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
         .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; background: #1c2128; color: #39d353; border: 1px solid #39d353; margin-left: 8px; }
         .footer { text-align: center; padding: 16px; color: #484f58; font-size: 11px; border-top: 1px solid #21262d; }
         .no-data { color: #484f58; font-size: 12px; padding: 12px 0; }
