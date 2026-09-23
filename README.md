@@ -139,7 +139,7 @@ The commands are simulated. They are not executed on the real host system.
 Clone the repository:
 
 ```bash
-git clone https://github.com/Anvitha-create/shellLM.git
+git clone https://github.com/shetty-anu05/shellLM.git
 cd shellLM
 ```
 
